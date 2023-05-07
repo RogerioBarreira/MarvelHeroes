@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B6ADD8182A074553009F2DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8172A074553009F2DAB /* AppDelegate.swift */; };
 		B6ADD81A2A074553009F2DAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8192A074553009F2DAB /* SceneDelegate.swift */; };
-		B6ADD81C2A074553009F2DAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD81B2A074553009F2DAB /* ViewController.swift */; };
-		B6ADD81F2A074553009F2DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ADD81D2A074553009F2DAB /* Main.storyboard */; };
 		B6ADD8212A074554009F2DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6ADD8202A074554009F2DAB /* Assets.xcassets */; };
 		B6ADD8242A074554009F2DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6ADD8222A074554009F2DAB /* LaunchScreen.storyboard */; };
+		B6ADD8332A07485A009F2DAB /* MarvelHeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8322A07485A009F2DAB /* MarvelHeroesListViewController.swift */; };
+		B6ADD8352A0748AD009F2DAB /* MarvelHeroesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8342A0748AD009F2DAB /* MarvelHeroesListView.swift */; };
+		B6ADD8372A0748D7009F2DAB /* MarvelHeroesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8362A0748D6009F2DAB /* MarvelHeroesListViewModel.swift */; };
+		B6ADD8392A07490C009F2DAB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8382A07490C009F2DAB /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B6ADD8142A074553009F2DAB /* MarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ADD8172A074553009F2DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6ADD8192A074553009F2DAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6ADD81B2A074553009F2DAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6ADD81E2A074553009F2DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6ADD8202A074554009F2DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6ADD8232A074554009F2DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6ADD8252A074554009F2DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6ADD8322A07485A009F2DAB /* MarvelHeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHeroesListViewController.swift; sourceTree = "<group>"; };
+		B6ADD8342A0748AD009F2DAB /* MarvelHeroesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHeroesListView.swift; sourceTree = "<group>"; };
+		B6ADD8362A0748D6009F2DAB /* MarvelHeroesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHeroesListViewModel.swift; sourceTree = "<group>"; };
+		B6ADD8382A07490C009F2DAB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				B6ADD8162A074553009F2DAB /* MarvelHeroes */,
+				B6ADD82F2A074822009F2DAB /* Source */,
 				B6ADD8152A074553009F2DAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,13 +63,46 @@
 			children = (
 				B6ADD8172A074553009F2DAB /* AppDelegate.swift */,
 				B6ADD8192A074553009F2DAB /* SceneDelegate.swift */,
-				B6ADD81B2A074553009F2DAB /* ViewController.swift */,
-				B6ADD81D2A074553009F2DAB /* Main.storyboard */,
 				B6ADD8202A074554009F2DAB /* Assets.xcassets */,
 				B6ADD8222A074554009F2DAB /* LaunchScreen.storyboard */,
 				B6ADD8252A074554009F2DAB /* Info.plist */,
 			);
 			path = MarvelHeroes;
+			sourceTree = "<group>";
+		};
+		B6ADD82F2A074822009F2DAB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B6ADD8312A074832009F2DAB /* Coordinator */,
+				B6ADD8302A07482F009F2DAB /* Controllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B6ADD8302A07482F009F2DAB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6ADD83A2A07498A009F2DAB /* MarvelHeroesList */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6ADD8312A074832009F2DAB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B6ADD8382A07490C009F2DAB /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B6ADD83A2A07498A009F2DAB /* MarvelHeroesList */ = {
+			isa = PBXGroup;
+			children = (
+				B6ADD8342A0748AD009F2DAB /* MarvelHeroesListView.swift */,
+				B6ADD8322A07485A009F2DAB /* MarvelHeroesListViewController.swift */,
+				B6ADD8362A0748D6009F2DAB /* MarvelHeroesListViewModel.swift */,
+			);
+			path = MarvelHeroesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +165,6 @@
 			files = (
 				B6ADD8242A074554009F2DAB /* LaunchScreen.storyboard in Resources */,
 				B6ADD8212A074554009F2DAB /* Assets.xcassets in Resources */,
-				B6ADD81F2A074553009F2DAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6ADD81C2A074553009F2DAB /* ViewController.swift in Sources */,
+				B6ADD8372A0748D7009F2DAB /* MarvelHeroesListViewModel.swift in Sources */,
 				B6ADD8182A074553009F2DAB /* AppDelegate.swift in Sources */,
+				B6ADD8392A07490C009F2DAB /* Coordinator.swift in Sources */,
+				B6ADD8352A0748AD009F2DAB /* MarvelHeroesListView.swift in Sources */,
+				B6ADD8332A07485A009F2DAB /* MarvelHeroesListViewController.swift in Sources */,
 				B6ADD81A2A074553009F2DAB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B6ADD81D2A074553009F2DAB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6ADD81E2A074553009F2DAB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6ADD8222A074554009F2DAB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +323,7 @@
 				INFOPLIST_FILE = MarvelHeroes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +350,7 @@
 				INFOPLIST_FILE = MarvelHeroes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
