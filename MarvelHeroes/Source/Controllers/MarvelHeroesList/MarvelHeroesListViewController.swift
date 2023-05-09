@@ -14,14 +14,27 @@ class MarvelHeroesListViewController: UIViewController {
         view.backgroundColor = .systemBackground
         return view
     }()
+    
+    let viewModel = MarvelHeroesListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Marvel Heroes List"
+        self.title = "List Heroes"
+        setupRequest()
     }
     
     override func loadView() {
         self.view = viewMarvelHeroesList
+    }
+    
+    func setupRequest() {
+        viewModel.requestCharacterViewModel { success in
+            if success {
+                print(success)
+            } else {
+                print("Erro request")
+            }
+        }
     }
 }
