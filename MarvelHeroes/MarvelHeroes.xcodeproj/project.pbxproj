@@ -13,6 +13,7 @@
 		B608378A2A09A3490047CF5A /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B60837892A09A3490047CF5A /* CryptoSwift */; };
 		B608378D2A09D70E0047CF5A /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B608378C2A09D70E0047CF5A /* ApiServices.swift */; };
 		B60837952A09F4CC0047CF5A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B60837942A09F4CC0047CF5A /* Kingfisher */; };
+		B67FDC552A0A9D35002DFD7A /* MHCharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FDC542A0A9D35002DFD7A /* MHCharacterCollectionViewCell.swift */; };
 		B6ADD8182A074553009F2DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8172A074553009F2DAB /* AppDelegate.swift */; };
 		B6ADD81A2A074553009F2DAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADD8192A074553009F2DAB /* SceneDelegate.swift */; };
 		B6ADD8212A074554009F2DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6ADD8202A074554009F2DAB /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		B601A4112A08202C00988977 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B601A4142A0820BA00988977 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		B608378C2A09D70E0047CF5A /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		B67FDC542A0A9D35002DFD7A /* MHCharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHCharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6ADD8142A074553009F2DAB /* MarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ADD8172A074553009F2DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6ADD8192A074553009F2DAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 				B608378C2A09D70E0047CF5A /* ApiServices.swift */,
 			);
 			path = ApiServices;
+			sourceTree = "<group>";
+		};
+		B67FDC532A0A9D06002DFD7A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B67FDC542A0A9D35002DFD7A /* MHCharacterCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B6ADD80B2A074553009F2DAB = {
@@ -146,6 +156,7 @@
 		B6ADD83A2A07498A009F2DAB /* MarvelHeroesList */ = {
 			isa = PBXGroup;
 			children = (
+				B67FDC532A0A9D06002DFD7A /* Cell */,
 				B6ADD8342A0748AD009F2DAB /* MarvelHeroesListView.swift */,
 				B6ADD8322A07485A009F2DAB /* MarvelHeroesListViewController.swift */,
 				B6ADD8362A0748D6009F2DAB /* MarvelHeroesListViewModel.swift */,
@@ -241,6 +252,7 @@
 				B6ADD8332A07485A009F2DAB /* MarvelHeroesListViewController.swift in Sources */,
 				B6ADD81A2A074553009F2DAB /* SceneDelegate.swift in Sources */,
 				B601A4122A08202C00988977 /* Character.swift in Sources */,
+				B67FDC552A0A9D35002DFD7A /* MHCharacterCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				API_KEY = SUA_CHAVE;
+				API_KEY = SUA_APIKEY_AQUI;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -313,7 +325,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRIVATE_KEY = SUA_CHAVE;
+				PRIVATE_KEY = SUA_PRIVATEKEY_AQUI;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -324,7 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				API_KEY = SUA_CHAVE;
+				API_KEY = SUA_APIKEY_AQUI;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -368,7 +380,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRIVATE_KEY = SUA_CHAVE;
+				PRIVATE_KEY = SUA_PRIVATEKEY_AQUI;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
