@@ -24,7 +24,6 @@ class Worker {
         
         request.requestGenerics(urlString: url, method: .get, custom: Character.self) { [weak self] myCharacter, success in
             guard let self = self else { return }
-            print(url)
             switch success {
             case true:
                 self.myCharacter = myCharacter

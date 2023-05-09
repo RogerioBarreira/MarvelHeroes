@@ -12,8 +12,12 @@ class MarvelHeroesListViewModel: NSObject {
     private var charac: Character?
     private let worker = Worker()
     
-    var nameHero: String {
-        return charac?.data?.results?.first?.name ?? ""
+    var numberOfItens: Int {
+        return charac?.data?.results?.count ?? 0
+    }
+    
+    func cellForItens(indexPath: IndexPath)-> Result? {
+        return charac?.data?.results?[indexPath.item]
     }
     
     func requestCharacterViewModel(completion: @escaping (Bool)-> Void) {
