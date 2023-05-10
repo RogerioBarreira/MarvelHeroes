@@ -22,4 +22,16 @@ class Coordinator: NSObject {
         let viewController = MarvelHeroesListViewController()
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func startMarvelHeroesDetail(detail: Result?) {
+        let viewController = MarvelHeroesDetailViewController()
+        viewController.viewModelMarvelHeroesDetail.detailHero(detail: detail)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func startMarvelHeroesDetailNetwork(detail: Result?) {
+        let viewController = MarvelHeroDetailNetworkViewController()
+        viewController.viewModelMarvelHeroDetailNetwork.detailHero(detail: detail)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 }
