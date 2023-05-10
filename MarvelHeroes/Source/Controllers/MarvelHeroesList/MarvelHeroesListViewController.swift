@@ -60,7 +60,33 @@ extension MarvelHeroesListViewController: UICollectionViewDelegate, UICollection
             cell.setupCell(hero: viewModel.cellForItens(indexPath: indexPath))
             return cell
         }
-        
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.startMarvelHeroesDetail(detail: viewModel.cellForItens(indexPath: indexPath))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == viewModel.addCharac.count - 10 && indexPath.item != viewModel.totalCharacter {
+            
+            viewModel.addPage()
+            self.viewMarvelHeroesList.loading.startAnimating()
+            viewModel.requestAddCharacterViewModel { [weak self] success in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.viewMarvelHeroesList.loading.stopAnimating()
+                }
+                switch success {
+                case true:
+                    self.viewModel.requestLoad = false
+                    self.viewMarvelHeroesList.collectionView.reloadData()
+                case false:
+                    print("Erro ao add Hero")
+                }
+            }
+        }
     }
 }

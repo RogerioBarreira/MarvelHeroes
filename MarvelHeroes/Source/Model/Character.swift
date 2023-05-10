@@ -23,7 +23,7 @@ struct DataClass: Codable {
 // MARK: - Result
 struct Result: Codable {
     let id: Int?
-    let name, description: String?
+    let name, description, modified: String?
     let thumbnail: Thumbnail?
     let urls: [URLElement]?
 }
