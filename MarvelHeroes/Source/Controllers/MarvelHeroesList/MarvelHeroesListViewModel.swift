@@ -53,7 +53,6 @@ class MarvelHeroesListViewModel: NSObject {
                 if let newCharac = newCharacter {
                     self.charac.append(contentsOf: newCharac.data?.results ?? [])
                     self.totalCharacter = newCharac.data?.total ?? 0
-                    print(self.totalCharacter)
                 }
                 completion(true)
             case false:

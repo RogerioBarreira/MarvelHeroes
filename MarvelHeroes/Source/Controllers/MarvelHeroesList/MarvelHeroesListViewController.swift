@@ -63,6 +63,12 @@ extension MarvelHeroesListViewController: UICollectionViewDelegate, UICollection
         return UICollectionViewCell()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.startMarvelHeroesDetail(detail: viewModel.cellForItens(indexPath: indexPath))
+    }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.item == viewModel.addCharac.count - 10 && indexPath.item != viewModel.totalCharacter {
             
@@ -77,7 +83,6 @@ extension MarvelHeroesListViewController: UICollectionViewDelegate, UICollection
                 case true:
                     self.viewModel.requestLoad = false
                     self.viewMarvelHeroesList.collectionView.reloadData()
-                    print("total de paginas add: \(self.viewModel.currentPage)")
                 case false:
                     print("Erro ao add Hero")
                 }
